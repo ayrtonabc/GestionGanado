@@ -138,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({ openSidebar, notificationCount }) => {
           )}
         </div>
 
-        <div className="relative ml-3">
+       {/*  <div className="relative ml-3">
           <div>
             <button
               className="flex items-center max-w-xs text-sm bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-primary"
@@ -185,7 +185,7 @@ const Header: React.FC<HeaderProps> = ({ openSidebar, notificationCount }) => {
               </button>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </header>
   );

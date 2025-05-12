@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import { notifications } from '../../data/mockData';
+import { Outlet } from 'react-router-dom';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout= () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const unreadNotifications = notifications.filter(n => !n.read);
 
@@ -48,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <main className="relative flex-1 overflow-y-auto focus:outline-none bg-gray-50">
           <div className="py-6">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-8">
-              {children}
+              <Outlet/>
             </div>
           </div>
         </main>
